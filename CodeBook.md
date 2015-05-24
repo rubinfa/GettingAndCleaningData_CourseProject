@@ -61,7 +61,8 @@ By applying the transoformation described above, the data set 'tidyDataSet.txt' 
 The first two colums of the data set correspond to the activity and the subject who carried out the experiment.
 * activity	
 * subject	
-The data set contains the average of each variable for each activity and each subject
+
+For each activity and each subject, the data set shows the average of each of the following variables: 
 * tBodyAcc.mean.X	
 * tBodyAcc.mean.Y	
 * tBodyAcc.mean.Z	
@@ -116,6 +117,9 @@ The data set contains the average of each variable for each activity and each su
 * fBodyGyro.meanFreq.X	
 * fBodyGyro.meanFreq.Y	
 * fBodyGyro.meanFreq.Z
+
+For a description of each of the above variables, please consult the features.txt files in the 'Human Activity Recognition Using Smartphones Data Set' [Ref 1]
+
 
 ## References
 [Ref 1] Human Activity Recognition Using Smartphones Data Set, http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
