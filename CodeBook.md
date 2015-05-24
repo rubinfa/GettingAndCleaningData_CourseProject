@@ -7,6 +7,8 @@ This file describes the variables, the data, and any transformations that were p
 The script responsible for generating the cleaned data set is called 'run_analysis.R' and can be found in the root folder of the my github repository GettingAndCleaningData_CourseProject [Ref 2]
 The script 'run_analysis.R' generates a txt file called 'tidyDataSet.txt', which contains the cleaned-up data set, after applying several transformations, as described below.
 
+I refer you to the README and features.txt files in the original dataset to learn more about the feature selection for the original dataset.
+
 ## Transformation performed by the 'run_analysis.R' script
 The script first loads the libraries needed for the transformation:
 ```
