@@ -8,11 +8,12 @@ The script responsible for generating the cleaned data set is called 'run_analys
 The script 'run_analysis.R' generates a txt file called 'tidyDataSet.txt', which contains the cleaned-up data set, after applying several transformations, as described below.
 
 ## Transformation performed by the 'run_analysis.R' script
+The script first loads the libraries needed for the transformation:
 ```
 library(dplyr)
 library(plyr)
 ```
-
+It also checks that the 'Human Activity Recognition Using Smartphones Data Set' has correctly been unzipped in the working directory:
 ```
 dataDirectoryBasePath <- "./UCI HAR Dataset"
 
@@ -20,6 +21,9 @@ if (!file.exists(dataDirectoryBasePath)) {
       stop(paste("The directory 'UCI HAR Dataset' does not exist in ", getwd()))
 }
 ```
+
+
+
 
 ## References
 [Ref 1] Human Activity Recognition Using Smartphones Data Set, http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
