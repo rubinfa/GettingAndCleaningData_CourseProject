@@ -22,6 +22,19 @@ if (!file.exists(dataDirectoryBasePath)) {
 }
 ```
 
+If the previous steps succeed, the scripts proceeds by merging the training and the test sets to create a single one.
+To do this, the script first loads the list of 'features', which will be used to name the colums of the cleaned-up data set 
+```
+features <- read.table(paste0(dataDirectoryBasePath, "/features.txt"), sep = " ", header = FALSE, col.names = c("featureid","description"))
+```
+The script merges separetely the subjects, y (activities), and X (measurements) data sets and combines them together  
+```
+subjects <- rbind(subjectsTraining, subjectsTest)
+activityIds <- rbind(activityIdsTraining, activityIdsTest)
+measurements <- rbind(measurementsTraining, measurementsTest)
+
+mergedDataSet <- cbind(subjects, activityIds, measurements)
+```
 
 
 
