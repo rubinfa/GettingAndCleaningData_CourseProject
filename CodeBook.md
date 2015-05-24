@@ -36,7 +36,19 @@ measurements <- rbind(measurementsTraining, measurementsTest)
 mergedDataSet <- cbind(subjects, activityIds, measurements)
 ```
 
-
+As next step, the script extracts only the measurements on the mean and standard deviation for each measurement, by appying a regular expression
+```
+indexes <- grep("subjectid|activityid|mean|std", names(mergedDataSet))
+mergedDataSet <- select(mergedDataSet, indexes)
+write.table(mergedDataSet, file="./UCI HAR Dataset/mergedDataSet.txt",  row.names=FALSE, sep="\t", quote=FALSE)
+```
+The script then replaces the 'Activity Id' variables by the corresponding activity names
+```
+activities <- read.table(paste0(dataDirectoryBasePath, "/activity_labels.txt"), sep = " ", header = FALSE, col.names = c("activityid","description"))
+mergedDataSet <- merge(x = activities, y = mergedDataSet, by = "activityid")
+```
+Finally, 
+```
 
 ## References
 [Ref 1] Human Activity Recognition Using Smartphones Data Set, http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
