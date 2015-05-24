@@ -3,7 +3,7 @@ Fausto Rubino
 24/05/2015
 
 ##Introduction
-This repository contains all the resources required for the Getting and Cleaning Data Project course project. The analysis of the project is performed on the 'Human Activity Recognition Using Smartphones'  Data Set, which can be downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+This repository contains all resources that were required for the Getting and Cleaning Data Project course project. The analysis of the project is performed on the 'Human Activity Recognition Using Smartphones'  Data Set, which can be downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ##Objective of the analysis
 The repository contains the run_analysis.R scrit, which merges the test and training sets together. Prerequisites for this script are the following:
@@ -11,7 +11,7 @@ The repository contains the run_analysis.R scrit, which merges the test and trai
 1. the UCI HAR Dataset must be extracted in the working directory
 2. the UCI HAR Dataset must be called "UCI HAR Dataset"
 
-After merging testing and training, the script will create a tidy data set containing the average of means and standard deviations of the variables in the original data set, organised by subject and activity.
+After merging testing and training, the script creates a tidy data set containing the average of means and standard deviations of the variables in the original data set, organised by subject and activity.
 
 ##Content of the repository
 The repository contains the following files:
