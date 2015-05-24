@@ -11,7 +11,7 @@ The repository contains the run_analysis.R scrit, which merges the test and trai
 1. the UCI HAR Dataset must be extracted in the working directory
 2. the UCI HAR Dataset must be called "UCI HAR Dataset"
 
-After merging testing and training, the script will create a tidy data set containing the average of means and standard deviations of the original data set, organised by subject and activity.
+After merging testing and training, the script will create a tidy data set containing the average of means and standard deviations of the variables in the original data set, organised by subject and activity.
 
 ##Content of the repository
 The repository contains the following files:
