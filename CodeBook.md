@@ -47,8 +47,14 @@ The script then replaces the 'Activity Id' variables by the corresponding activi
 activities <- read.table(paste0(dataDirectoryBasePath, "/activity_labels.txt"), sep = " ", header = FALSE, col.names = c("activityid","description"))
 mergedDataSet <- merge(x = activities, y = mergedDataSet, by = "activityid")
 ```
-Finally, 
+Finally, the script creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ```
+tidyDataSet <- group_by(mergedDataSet, activity, subject)
+tidyDataSet <- summarise_each(tidyDataSet, funs(mean))
+tidyDataSet <- arrange(tidyDataSet, activity, subject)
+write.table(tidyDataSet, file="./UCI HAR Dataset/tidyDataSet.txt",  row.names=FALSE, sep="\t", quote=FALSE)
+```
+
 
 ## References
 [Ref 1] Human Activity Recognition Using Smartphones Data Set, http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
