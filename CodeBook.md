@@ -60,4 +60,5 @@ write.table(tidyDataSet, file="./UCI HAR Dataset/tidyDataSet.txt",  row.names=FA
 
 ## References
 [Ref 1] Human Activity Recognition Using Smartphones Data Set, http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 [Ref 2] GettingAndCleaningData_CourseProject GitHub repository, https://github.com/rubinfa/GettingAndCleaningData_CourseProject
